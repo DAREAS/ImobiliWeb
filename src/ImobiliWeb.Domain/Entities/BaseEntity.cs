@@ -6,7 +6,11 @@ using System.Threading.Tasks;
 
 namespace ImobiliWeb.Domain.Entities
 {
-    internal class BaseEntity
+    public abstract class BaseEntity
     {
+        public long Id { get; set; }
+        public Guid Key { get; set; }
+        public DateTime CreatedAtUtc { get; set; }
+        public DateTime UpdatedAtUtc { get; set; }
     }
 }
